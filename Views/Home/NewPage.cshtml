@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Nuova pagina Music";
+}
+@model MusicModel;
+<center><h1> @ViewData["Title"]</h1></center>
+
+<center><img src="~/image/image1.jpg" style="width:256px;" /></center>
+<table style="border:1px solid">
+
+@{
+    for( int i =0; i < Model.Songs.Count; i++)
+    {
+        <tr>
+            <td> Canzone:  @Model.Songs[i].Canzone</td>
+            <td> Cantante: @Model.Songs[i].Cantante</td>
+        </tr>
+    }
+}
+</table>

@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "New Model";
+}
+<h1>@ViewData["Title"]</h1>
+@model NewModel;
+
+<table border="2px solid">
+    <tr>
+        <th>ID</th><th>Nome</th>
+    </tr>
+    <tr>
+        <td>@Model.Id</td><td>@Model.Name</td>
+    </tr>
+</table>

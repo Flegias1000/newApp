@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Elenca Persons";
+}
+<h1>@ViewData["Title"]</h1>
+@model List<PersonsModel>;
+
+<body style=" background-image: linear-gradient(#d7f4f8 30%, #66d1df, #edec91);">
+<div class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="h1 col-12" style="padding-bottom: 50px">Prenotazioni effettuate</div>
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>Cognome</th>
+                        </tr>
+ 
+                    @foreach (PersonsModel person in Model)
+                    {
+                        <tr>
+                        <td>@person.Id</td>
+                        <td>@person.Nome</td>
+                        <td>@person.Cognome</td>
+                        </tr>
+                    }
+        
+                    </table>
+                </div>
+             </div>
+         </div>
+</body>                  
